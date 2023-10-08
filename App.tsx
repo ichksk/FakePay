@@ -1,20 +1,29 @@
+import React from "react"
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from "@react-navigation/stack";
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
 
+import { PaymentView } from './src/payment';
+import { PurchaseView } from "src/purchase";
+import { ResultView } from "src/result";
+
+const Stack = createStackNavigator()
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <>
+      <StatusBar/>
+      <NavigationContainer>
+        <Stack.Navigator
+          screenOptions={{
+            headerShown: false,
+            gestureEnabled: false,
+          }}
+        >
+          <Stack.Screen name="Payment" component={PaymentView}/>
+          <Stack.Screen name="Purchase" component={PurchaseView}/>
+          <Stack.Screen name="Result" component={ResultView}/>
+        </Stack.Navigator>
+      </NavigationContainer>
+    </>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
