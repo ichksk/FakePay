@@ -11,8 +11,8 @@ export const PayButton = () => {
     const navigation = useNavigation<StackNavigationProp<RootStack>>()
 
     const pay = () => {
-        playSound().
-        then(() => {
+        playSound()
+        .then(() => {
             navigation.navigate("Result")
         })
     }

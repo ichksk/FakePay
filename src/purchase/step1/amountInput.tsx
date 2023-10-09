@@ -1,11 +1,17 @@
 import { useContext, useState } from "react"
 import { View, Text } from "react-native"
-import { AmountContext } from "../amount"
+import { AmountContext } from "../../contexts/amount"
 import { Input } from "react-native-elements"
 
 export const AmountInput = () => {
     const { amount, setAmount } = useContext(AmountContext)
     const [ isActive, setIsActive ] = useState<boolean>(false);
+
+    const handleChangeText = (text: string) => {
+        if(text !== "0") {
+            setAmount(text)
+        }  
+    }
 
     return (
             <View>
@@ -21,7 +27,7 @@ export const AmountInput = () => {
                     textAlign="right"
                     keyboardType="number-pad"
                     value={amount}
-                    onChangeText={(e) => setAmount(e)}
+                    onChangeText={handleChangeText}
                     onFocus={() => setIsActive(true)}
                     onBlur={() => setIsActive(false)}
 

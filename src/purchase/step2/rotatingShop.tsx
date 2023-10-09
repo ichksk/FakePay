@@ -1,13 +1,12 @@
-import { View, Text } from "react-native"
-import { useContext, useEffect } from "react"
-
-import { Shop } from "../step1/shop"
-import { AmountContext } from "../amount"
-import Animated, { Easing, useAnimatedStyle, useSharedValue, withDelay, withTiming } from "react-native-reanimated"
+import { useEffect } from "react"
+import { View } from "react-native"
 import { Icon } from "react-native-elements"
+import Animated, { Easing, useAnimatedStyle, useSharedValue, withDelay, withTiming } from "react-native-reanimated"
+
+import { Shop } from "../shop"
+import { AmountLabel } from "src/utils/amountLabel"
 
 export const RotatingShop = () => {
-    const { amount } = useContext(AmountContext)
     const degree = useSharedValue(0)
 
 
@@ -22,6 +21,8 @@ export const RotatingShop = () => {
         }
     })
 
+
+
     return (
         <View
             style={{
@@ -31,19 +32,8 @@ export const RotatingShop = () => {
             <Animated.View
                 style={[animatedStyle]}
             >
-                <Shop labelStyle={{
-                    fontSize:24,
-                    fontWeight:"600"
-                }}/>
-                <Text
-                    style={{
-                        fontSize: 120,
-                        fontWeight: "400",
-                        textAlign: "center",
-                    }}
-                >
-                    {amount?.replace( /(\d)(?=(\d\d\d)+(?!\d))/g, '$1,')}<Text style={{fontSize: 24, fontWeight:"600"}}>円</Text>
-                </Text>
+                <Shop/>
+                <AmountLabel/>
             </Animated.View>
             <Icon
                 type="material-community"

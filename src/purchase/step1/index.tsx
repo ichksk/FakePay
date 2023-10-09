@@ -4,10 +4,10 @@ import { View } from "react-native"
 import { useContext } from "react"
 import KeyboardSpacer from 'react-native-keyboard-spacer';
 
-import { Shop } from "./shop"
+import { Shop } from "../shop"
 import { AmountInput } from "./amountInput"
 import { Wallet } from "src/payment/barcodeTab/wallet"
-import { AmountContext } from "../amount"
+import { AmountContext } from "../../contexts/amount"
 import { useNavigation } from "@react-navigation/native";
 import { StackNavigationProp } from "@react-navigation/stack";
 import { PurchaseStack } from "../route";
