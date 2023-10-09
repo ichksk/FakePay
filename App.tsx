@@ -10,6 +10,7 @@ import { ResultView } from "src/result";
 import { AmountContext } from "src/contexts/amount";
 
 const Stack = createStackNavigator()
+
 export default function App() {
   const [ amount, setAmount ] = useState<string | undefined>(undefined)
 

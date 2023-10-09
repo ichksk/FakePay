@@ -1,8 +1,8 @@
+import { Button } from "@rneui/themed"
 import { StackNavigationProp, createStackNavigator } from "@react-navigation/stack"
+import { useNavigation } from "@react-navigation/native"
 import { Step1 } from "./step1"
 import { Step2 } from "./step2"
-import { Button } from "react-native-elements"
-import { useNavigation } from "@react-navigation/native"
 import { PurchaseStack } from "./route"
 
 const Stack = createStackNavigator()

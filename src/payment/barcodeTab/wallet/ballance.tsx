@@ -1,5 +1,5 @@
 import { Text, View } from "react-native"
-import { Icon, ListItem } from "react-native-elements"
+import { Icon, ListItem } from "@rneui/themed"
 
 export const Ballance = ({hidden, toggleHidden} : {hidden: boolean, toggleHidden: ()=>void}) => {
     const ballance = 1000000

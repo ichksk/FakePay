@@ -4,7 +4,7 @@ export const Container = (props: ViewProps) => {
     return (
         <View
             style={{
-                height: 400,
+                // height: 400,
                 top: 100,
                 borderRadius: 16,
                 backgroundColor: "white",
@@ -15,7 +15,6 @@ export const Container = (props: ViewProps) => {
                 },
                 shadowOpacity: 0.30,
                 shadowRadius: 4.65,
-
                 elevation: 8,
             }}
             {...props}

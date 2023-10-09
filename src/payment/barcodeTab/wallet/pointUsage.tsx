@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { Text, View } from "react-native"
-import { Switch } from "react-native-elements"
+import { Switch } from "@rneui/themed"
 
 export const PointUsage = ({hidden} : {hidden: boolean}) => {
     const point = 0

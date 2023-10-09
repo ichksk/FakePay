@@ -1,6 +1,6 @@
 import { useEffect } from "react"
 import { View } from "react-native"
-import { Icon } from "react-native-elements"
+import { Icon } from "@rneui/themed"
 import Animated, { Easing, useAnimatedStyle, useSharedValue, withDelay, withTiming } from "react-native-reanimated"
 
 import { Shop } from "../shop"
@@ -8,7 +8,6 @@ import { AmountLabel } from "src/utils/amountLabel"
 
 export const RotatingShop = () => {
     const degree = useSharedValue(0)
-
 
     useEffect(() => {
         degree.value = withDelay(300, withTiming(180, {easing:Easing.linear, duration:300}))

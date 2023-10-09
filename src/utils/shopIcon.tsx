@@ -1,4 +1,4 @@
-import { Icon, IconProps } from "react-native-elements";
+import { Icon, IconProps } from "@rneui/themed";
 
 export const ShopIcon = (props: Omit<IconProps, "name" | "color" | "type">) => {
     return (

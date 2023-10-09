@@ -1,7 +1,8 @@
 import { useContext, useState } from "react"
 import { View, Text } from "react-native"
-import { AmountContext } from "../../contexts/amount"
-import { Input } from "react-native-elements"
+import { Input } from "@rneui/themed"
+
+import { AmountContext } from "src/contexts/amount"
 
 export const AmountInput = () => {
     const { amount, setAmount } = useContext(AmountContext)

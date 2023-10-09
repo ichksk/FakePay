@@ -1,9 +1,10 @@
 import { SafeAreaView } from "react-native"
-import { Button } from "react-native-elements"
+import { Button } from "@rneui/themed"
 import KeyboardSpacer from "react-native-keyboard-spacer"
-import { usePlaySound } from "./sound"
 import { useNavigation } from "@react-navigation/native"
 import { StackNavigationProp } from "@react-navigation/stack"
+
+import { usePlaySound } from "./sound"
 import { RootStack } from "src/route"
 
 export const PayButton = () => {

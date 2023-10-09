@@ -1,4 +1,4 @@
-import { Icon } from "react-native-elements";
+import { Icon } from "@rneui/themed";
 import { TouchableOpacity, StyleSheet } from "react-native"
 import { FlashMode } from "expo-camera";
 

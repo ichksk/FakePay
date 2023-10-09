@@ -1,4 +1,4 @@
-import { Icon } from "react-native-elements"
+import { Icon } from "@rneui/themed"
 
 export const HeaderLeftIcon = () => {
     return (

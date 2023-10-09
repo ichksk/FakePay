@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { Text, View } from "react-native"
-import { Icon } from "react-native-elements"
+import { Icon } from "@rneui/themed"
 
 export const Timer = () => {
     const [ time, setTime ] = useState<number>(300)
