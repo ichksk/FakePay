@@ -2,7 +2,6 @@ import { TouchableWithoutFeedback, Keyboard, SafeAreaView } from "react-native"
 import { Button } from "@rneui/themed"
 import { View } from "react-native"
 import { useContext } from "react"
-import KeyboardSpacer from 'react-native-keyboard-spacer';
 
 import { Shop } from "../shop"
 import { AmountInput } from "./amountInput"
@@ -11,6 +10,7 @@ import { AmountContext } from "../../contexts/amount"
 import { useNavigation } from "@react-navigation/native";
 import { StackNavigationProp } from "@react-navigation/stack";
 import { PurchaseStack } from "../route";
+import KeyboardSpacer from "../KeyboardSpacer"
 
 export const Step1 = () => {
     const { amount } = useContext(AmountContext)
@@ -63,7 +63,7 @@ export const Step1 = () => {
                                 navigation.navigate("Step2")
                             }}
                         />
-                        <KeyboardSpacer/>
+                        <KeyboardSpacer />
                     </SafeAreaView>
                 </View>
             </View>
