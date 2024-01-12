@@ -23,7 +23,6 @@ export default function App() {
             headerShown: false,
             gestureEnabled: false,
           }}
-          initialRouteName="Purchase"
         >
           <Stack.Screen name="Payment" component={PaymentView}/>
           <Stack.Screen name="Purchase" component={PurchaseView}/>
